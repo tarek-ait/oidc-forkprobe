@@ -22,3 +22,5 @@ jobs:
           status=$(curl -s -o /dev/null -w '%{http_code}' -H "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=example")
           echo "OIDC_HTTP_STATUS=$status"
           if [ "$status" = "200" ]; then echo "OIDC_REACHABLE=true"; else echo "OIDC_REACHABLE=false"; fi
+
+# fork-side tweak
